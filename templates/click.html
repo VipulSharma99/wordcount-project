@@ -1,0 +1,14 @@
+<h1>There are {{length}} words in a original sentence</h1><hr />
+
+<a href="{% url 'home' %}">Start again</a>
+<h1>The original sentence =</h1> {{words}}
+
+<h3>Word count:</h3>
+{{wordcount}}<br />
+
+{% for word , count in wordcount %}
+{{ word }}
+<br />
+{{ count }}
+<br />
+{% endfor %}
